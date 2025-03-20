@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/glrodriperez98/tic-tac-toe-webapp.git/static/css/main.07d73ee1.css",
+    "main.js": "/glrodriperez98/tic-tac-toe-webapp.git/static/js/main.df7bfaaa.js",
+    "index.html": "/glrodriperez98/tic-tac-toe-webapp.git/index.html",
+    "main.07d73ee1.css.map": "/glrodriperez98/tic-tac-toe-webapp.git/static/css/main.07d73ee1.css.map",
+    "main.df7bfaaa.js.map": "/glrodriperez98/tic-tac-toe-webapp.git/static/js/main.df7bfaaa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07d73ee1.css",
+    "static/js/main.df7bfaaa.js"
+  ]
+}
