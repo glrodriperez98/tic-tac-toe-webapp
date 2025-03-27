@@ -1,0 +1,194 @@
+/* Centers the game */
+.container {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+/* Styles the title */
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h2, h3 {
+  color: #555;
+  margin: 5px 0;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  margin: 10px 0;
+}
+
+/* Coin Toss and Instructions */
+.instructions {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 50%;
+}
+
+/* Coin Flip Animation */
+.coin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.coin {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, gold 50%, darkgoldenrod 100%);
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flip {
+  animation: flipCoin 1.5s ease-in-out forwards;
+}
+
+@keyframes flipCoin {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(720deg); }
+  100% { transform: rotateY(720deg); }
+}
+
+/* Toss & Marker Buttons */
+.toss-btn, .marker-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.toss-btn {
+  background-color: #f1c40f;
+  color: black;
+}
+
+.marker-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.marker-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Styles the body */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Tic Tac Toe Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 10px;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Game Cells */
+.cell {
+  width: 120px;
+  height: 120px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.cell:hover {
+  background-color: #ddd;
+}
+
+/* X and O colors */
+.x-marker {
+  color: #3498db; /* Blue for X */
+}
+
+.o-marker {
+  color: #e74c3c; /* Red for O */
+}
+
+/* Animation for X and O */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.x-marker, .o-marker {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeOutIn {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Apply animation when resetting */
+.board.resetting {
+  animation: fadeOutIn 0.5s ease-in-out;
+}
+
+/* Style the New Round button */
+.new-round-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.new-round-btn:hover {
+  background-color: #219150;
+}
+
+/* Reset Scores Button */
+.reset-scores-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.reset-scores-btn:hover {
+  background-color: #2980b9;
+}
